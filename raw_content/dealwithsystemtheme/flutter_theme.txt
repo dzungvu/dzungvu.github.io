@@ -1,0 +1,70 @@
+This post is about to show how I deal with dark/light theme when development with Flutter.
+If you click to this post because the title, so you all know what exactly what is the purpose of this post.
+So I will go strange forward to the main content.
+
+After created new project successfully by using your keyboard and typing something on whatever your IDE is. Then you should remove all the unnecessary code in main.dart file.
+This is what remain in my file: 
+```
+import 'package:animation_shop/src/app.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+```
+Don't pay any attension on the import with package:animation_shop/src/app.dart because this import allow me to use class MyApp.
+What inside this class? Nice! I will let you know immediately.
+
+```
+import 'package:animation_shop/res/themes.dart';
+import 'package:animation_shop/routes.dart';
+import 'package:animation_shop/src/ui/screen/home/home_screen.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(new FocusNode());
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Animation Shop",
+        themeMode: ThemeMode.system,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        home: HomeScreen(),
+        routes: routes,
+      ),
+    );
+  }
+}
+```
+
+So, here we go. Line by line and you'll know exactly nothing.
+
+To make the MyApp class becomes the app, you need to make it becomes a widget. Because with Flutter, everything is widget.
+Here MyApp extends StatelessWidget. You can make it extends StatefullWidget if you want. Its not the problem.
+Inside I put the GestureDetector. What? Why?
+When you select a textfield in app, soft keyboard will be shown, so, to close the keyboard, what you shold do? Exactly. Touch outside the textfield. So, this will allow us to create a first layout to handle the touch.
+Then, onTap we put some strange code here. It just create a new focus node and request focus on it. This makes out app now is not focusing on textfield anymore. Then the keyboard will be hided.
+
+child: MaterialApp
+Out main app will be MaterialApp. It should be this. No more explain.
+
+debugShowCheckedModeBanner: false,
+To disable the debug banner on right top corner. Everyone hate that banner. And you too.
+
+title: "Animation Shop",
+The title.
+
+themeMode: ThemeMode.system,
+This make your app know what theme mode your phone is. Then select the right theme to apply on your app.
+
+theme: AppTheme.lightTheme,
+This will be used as your default theme. If you dont define darkTheme, then this theme will be applied on your without carring about your system theme.
+
+darkTheme: AppTheme.darkTheme,
+When your device is in darkTheme. This will be automaticly apply. Very good.
+
+But you suddently recognize

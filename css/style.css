@@ -1294,3 +1294,41 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   
+  .collapsible {
+    background-color: #ff8b00;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsiblecontent {
+    display: none;
+    overflow: hidden;
+    margin: 70px;
+  }
+
+    /* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

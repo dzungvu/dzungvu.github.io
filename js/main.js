@@ -290,9 +290,10 @@ jQuery(document).ready(function ($) {
 
 
 	let year_experience = (new Date().getFullYear() - 2017.5);
-	let android_experience = (new Date().getFullYear() - 2019);
-	let textYearExperience = `My current job's title is Mobile Developer. With about ${year_experience} years in Mobile development, I have spent 1 year in iOS Native and ${android_experience} years in Android Native development. In addition, I have learned and created apps in Flutter for about 1.5 years. `;
-	let textExperienceSubHeader = `I have ${year_experience} years experience in mobile development in various size of company and culture`
+	let android_experience = (new Date().getFullYear() - 2019) + 0.5;
+	let leader_experience = (new Date().getFullYear() - 2022) + 0.5;
+	let textYearExperience = `My current job's title is Mobile Developer. With about ${year_experience} years in Mobile development, I have spent 1 year in iOS Native (2018-2019) and ${android_experience} years in Android Native development. In addition, I have learned and created apps in Flutter for about 1.5 years. `;
+	let textExperienceSubHeader = `I have ${year_experience} years experience in mobile development in various size of company and culture (including over 2 years working as Team Lead/Project Lead)`
 	document.getElementById("year_experience").textContent = textYearExperience;
 	document.getElementById("experience_sub_header").textContent = textExperienceSubHeader;
 

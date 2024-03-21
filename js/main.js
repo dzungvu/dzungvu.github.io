@@ -297,4 +297,61 @@ jQuery(document).ready(function ($) {
 	document.getElementById("year_experience").textContent = textYearExperience;
 	document.getElementById("experience_sub_header").textContent = textExperienceSubHeader;
 
+	//send tracking GA4
+	document.getElementById("welcome_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'welcome',
+			'event_label': 'click_welcome'
+		});
+	});
+
+	document.getElementById("skills_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'skills',
+			'event_label': 'click_skills'
+		});
+	});
+
+	document.getElementById("experience_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'experience',
+			'event_label': 'click_experience'
+		});
+	});
+
+	document.getElementById("projects_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'projects',
+			'event_label': 'click_projects'
+		});
+	});
+
+	document.getElementById("education_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'education',
+			'event_label': 'click_education'
+		});
+	});
+
+	document.getElementById("blog_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'blog',
+			'event_label': 'click_blog'
+		});
+	});
+
+	document.getElementById("contact_section").addEventListener("click", function () {
+		gtag('event', 'click', {
+			'event_category': 'contract',
+			'event_label': 'click_contract'
+		});
+	});
+
+	document.getElementById("download_cv_file").addEventListener("click", function () {
+		gtag('event', 'download', {
+			'event_category': 'cv',
+			'event_label': 'download_cv'
+		});
+	});
+
 });

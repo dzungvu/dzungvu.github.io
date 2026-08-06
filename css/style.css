@@ -1820,6 +1820,14 @@ h5,
 .pricing {
   background: #333;
   padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing>p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .pricing .price>span {

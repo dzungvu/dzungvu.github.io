@@ -1843,6 +1843,33 @@ h5,
   margin-bottom: 20px;
 }
 
+.whatsapp-link {
+  position: relative;
+}
+
+.whatsapp-link .whatsapp-preview {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 10px);
+  z-index: 1000;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-link:hover .whatsapp-preview {
+  display: block;
+}
+
+.whatsapp-link .whatsapp-preview img {
+  width: 220px;
+  max-width: none;
+  display: block;
+}
+
 .prize-item figure {
   height: 280px;
   display: flex;

@@ -1843,6 +1843,19 @@ h5,
   margin-bottom: 20px;
 }
 
+.prize-item figure {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.prize-item figure img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 /*PRELOADING------------ */
 #overlayer {
   width: 100%;

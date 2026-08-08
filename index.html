@@ -1,768 +1,630 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-  <title>DungVu - Welcome!</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vũ Thế Dũng — Android Developer</title>
+  <meta name="description"
+    content="Vũ Thế Dũng (DungVu) — Android Developer in Ho Chi Minh City. Kotlin, Jetpack Compose, and 8+ years building mobile products.">
 
-  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/aos.css">
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css">
-
+  <!-- Set the theme before first paint so the page never flashes the wrong one.
+       The `js` class gates the scroll-reveal styles, so content stays visible
+       if scripting is unavailable. -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.dataset.theme = stored || (prefersLight ? 'light' : 'dark');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark">DV</span>
+        <span class="nav__name">Vũ Thế Dũng</span>
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z" />
+          </svg>
+        </button>
+        <a class="btn btn--sm" href="files/vu_the_dung_cv.pdf" id="cv-download" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 19h16" />
+          </svg>
+          <span>CV</span>
+        </a>
+        <button class="icon-btn nav__burger" id="nav-toggle" type="button" aria-label="Open menu"
+          aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="site-wrap" id="home-section">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+  <main id="main">
+    <!-- Hero ------------------------------------------------------------- -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="hero__eyebrow reveal">
+          <span class="dot"></span> Available for interesting work
+        </p>
+        <h1 class="hero__title reveal">
+          Building Android apps<br>that <em>millions</em> actually use.
+        </h1>
+        <p class="hero__lead reveal">
+          I'm <strong>Vũ Thế Dũng</strong> — an Android developer in Ho Chi Minh City with
+          <span data-years="total">8.5</span> years in mobile, currently leading the app team at FPT Play.
+          I work mostly in Kotlin, Jetpack Compose, and increasingly alongside AI tooling.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#contact">
+            Get in touch
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a class="btn" href="#projects">See my work</a>
         </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
 
-
-
-
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-      <div class="container">
-        <div class="row align-items-center position-relative">
-          <div class="col-12">
-            <nav class="site-navigation text-right ml-auto " role="navigation">
-              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                <li><a href="#welcome-section" id="welcome_section" class="nav-link">Welcome</a></li>
-                <li><a href="#skills-section" id="skills_section" class="nav-link">Skills</a></li>
-                <li><a href="#experience-section" id="experience_section" class="nav-link">Experience</a></li>
-                <li><a href="#projects-section" id="projects_section" class="nav-link">Projects</a></li>
-                <li><a href="#education-section" id="education_section" class="nav-link">Education</a></li>
-                <li><a href="#prizes-section" id="prizes_section" class="nav-link">Prizes</a></li>
-                <li><a href="#blog-section" id="blog_section" class="nav-link">Blog</a></li>
-                <!-- <li><a href="#rewards-section" class="nav-link">Rewards</a></li> -->
-                <li><a href="#contact-section" id="contact_section" class="nav-link">Contact</a></li>
-                <li><a href="v2/index.html" class="nav-link v2-link">New design <span class="v2-badge">NEW</span></a></li>
-                <!-- <li><p style="color: white;"><span><a href="files/vu_the_dung_cv.pdf" id="download_cv_file"><img id="download_cv" src="icons/download_cv.png" width="16px" title="Download CV"/></a></span></p></li> -->
-                <li><p style="color: white;"><span><a href="files/vu_the_dung_cv.pdf" id="download_cv_file"><img id="download_cv" src="icons/download_cv.png" width="16px" title="Download CV"/></a></span></p></li>
-
-              </ul>
-            </nav>
-
+        <dl class="stats reveal">
+          <div class="stat">
+            <dt>Years in mobile</dt>
+            <dd><span data-years="total">8.5</span></dd>
           </div>
-
-          <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-              class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-
-    </header>
-  </div>
-
-  <!-- Welcome ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="welcome-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>Welcome!</h2>
-            <p>Hi, I'm DungVu — thank you for visiting my page! Here you can find my public profile and get to
-              know more about me and my work.</p>
+          <div class="stat">
+            <dt>Years on Android</dt>
+            <dd><span data-years="android">7.5</span></dd>
           </div>
+          <div class="stat">
+            <dt>Years leading</dt>
+            <dd><span data-years="lead">4.5</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Awards</dt>
+            <dd>4</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- About ------------------------------------------------------------ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <p class="section__label reveal">01 — About</p>
+        <div class="about">
+          <div class="reveal">
+            <h2 class="section__title">A developer who likes shipping things that last.</h2>
+            <p class="prose">
+              My full name is Vũ Thế Dũng. I hold a Bachelor's degree in Computer Science from the
+              University of Information Technology (UIT) and I'm based in Ho Chi Minh City.
+            </p>
+            <p class="prose">
+              I started in native iOS for a year, moved to Android, and have stayed there since — with a
+              detour through Flutter. These days I lead a mobile team, which means as much code review and
+              technical guidance as feature work.
+            </p>
+            <p class="prose">
+              My goal is to keep growing into a genuinely professional engineer: refining how I think about
+              software, and leaving every product better than I found it.
+            </p>
+          </div>
+          <aside class="card card--quiet reveal">
+            <h3 class="card__title">At a glance</h3>
+            <ul class="facts">
+              <li><span>Location</span><b>Ho Chi Minh City, VN</b></li>
+              <li><span>Role</span><b>Android Developer</b></li>
+              <li><span>Focus</span><b>Kotlin · Compose</b></li>
+              <li><span>Also</span><b>Flutter · AI tooling</b></li>
+              <li><span>English</span><b>TOEIC 770</b></li>
+            </ul>
+          </aside>
         </div>
       </div>
+    </section>
 
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h4>First of all,</h4>
+    <!-- Skills ----------------------------------------------------------- -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <p class="section__label reveal">02 — Skills</p>
+        <h2 class="section__title reveal">What I work with</h2>
+
+        <div class="grid grid--skills">
+          <article class="card reveal">
+            <h3 class="card__title">Languages &amp; core</h3>
+            <p>Strong foundation in OOP and common design patterns, applied daily across production apps.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>Java</li><li>Dart</li><li>OOP</li><li>Design patterns</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Android platform</h3>
+            <p>UI in both Jetpack Compose and XML, plus the Google services that ship alongside it.</p>
+            <ul class="tags">
+              <li>Jetpack Compose</li><li>XML views</li><li>Coroutines</li><li>Flow</li>
+              <li>Play Console</li><li>FCM</li><li>Crashlytics</li><li>Billing</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Data &amp; networking</h3>
+            <p>Web service integration over SOAP, REST, JSON and XML, with local persistence to match.</p>
+            <ul class="tags">
+              <li>Retrofit</li><li>OkHttp3</li><li>Room</li><li>SQLite</li><li>Realm</li><li>Reactive</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Architecture &amp; tooling</h3>
+            <p>Structuring apps so they stay testable, plus the pipeline that gets them to users.</p>
+            <ul class="tags">
+              <li>MVVM</li><li>MVI</li><li>MVP</li><li>Hilt</li><li>Git</li><li>Jenkins</li>
+              <li>Proxyman</li><li>Jira</li>
+            </ul>
+          </article>
+
+          <article class="card card--accent reveal">
+            <h3 class="card__title">AI-assisted development</h3>
             <p>
-            My full name is Vũ Thế Dũng. I am
-            <script>document.write(new Date().getFullYear() - 1996);</script> years old, I hold a Bachelor's degree in Computer Science from the University of Information Technology (UIT), and I am currently based in
-            Ho Chi Minh City.
+              Proficient with tools such as Claude and Codex. Experienced in the Model Context Protocol (MCP),
+              building custom skills, and working with AI agents such as OpenClaw and Hermes.
             </p>
-            <p id="year_experience"></p>
+            <ul class="tags">
+              <li>Claude</li><li>Codex</li><li>MCP</li><li>Custom skills</li><li>Agents</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Working with people</h3>
             <p>
-            <b>My goal is to grow into a truly professional software engineer — continuously refining my mindset about software development and striving to make every product better than it was before. To get there, I aim to become a better version of myself every day.</b>
+              Collaborating across Product, Design, Backend, System and QA; reviewing code and supporting
+              teammates; and staying deliberately curious about new technology.
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Skills ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="skills-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>My Skills</h2>
-            <p>Below are my main skills, just involve what I think it is important to list out.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Technical skills -->
-      <div class="row mb-3">
-        <div class="col-md-7">
-          <div class="block-heading-1 text-primary" data-aos="fade-up" data-aos-delay="">
-            <h4>Technical Skills:</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">OOP</h3>
-            I thought it was important to list out this very classic knowledge and make sure to understand what it
-            is in programming.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Programming language</h3>
-            From my strongest to the less strongest: Kotlin (Android Jetpack Compose + xml), Java, Dart (For Flutter)
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Web services</h3>
-            Experience in web service integration (SOAP, REST, JSON, XML) with Retrofit, Okhttp3, Reactive...
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Mobile Database</h3>
-            Android: Room, SQLite, Realm<br>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Google services and others</h3>
-            I have the experience in release android application in Play store, Firebase services(FCM/Crashlytic/Firestore/Billing), third
-            party login (Facebook, Google), Coroutines and Flow
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Dependency Injection</h3>
-            Hilt: I choose to use it because it's one of the most popular library for automated DI. And Jetpack
-            recommended this library.<br>
-            Hilt is build on top of Dagger, stable, supported by AS, well documents, big communication.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Project structure</h3>
-            Familiar with MVC, MVP, MVVM...
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Debugging and Troubleshooting</h3>
-            Identify and fix bugs, performance bottlenecks and other issues.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Software Development tools</h3>
-            Jenkins, SourceTree, Proxyman, Jira/Redmine
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">AI-Assisted Development</h3>
-            Proficient in AI-assisted development with tools such as Claude and Codex. Experienced in the Model
-            Context Protocol (MCP), building custom skills, and working with AI agents such as OpenClaw and Hermes.
-          </div>
-        </div>
-      </div>
-
-      <!-- Soft skills -->
-      <div class="row mb-3 mt-5">
-        <div class="col-md-7">
-          <div class="block-heading-1 text-primary" data-aos="fade-up" data-aos-delay="">
-            <h4>Soft Skills:</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Collaborate/Working with other teams</h3>
-            Communicate with PM or other teams (Product/Design/BE/System/QA/...) to make sure products are released in time and always worthy
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Team work/Individual work</h3>
-            Collaborate with other team members towards a common objective or provide support to others.</br>
-            Or taking sole responsibility for a task or project.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Review source code/Provide technical support</h3>
-            Review source code of other members to make sure it is good enough to merge into main branch. Or provide technical support for other members.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">Self-learning, Researching, Staying update</h3>
-            Keep learning new technologies, new tools that can help to improve the quality of the product.
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="block__35630">
-            <h3 class="mb-3 text-white">English</h3>
-            I'm not fluent in communication in English but I can read/write technical documents in English pretty well.
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Experiences ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="experience-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>Experience</h2>
-            <p id="experience_sub_header"></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="https://fptplay.vn" class="block-team-member-1-link">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <span class="logo-badge"><img src="images/fptplaylogo.png" alt="FPT Play logo" class="img-fluid"></span>
-              </figure>
-              <h3 class="font-size-20 text-black">FPT Play</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Android
-                Developer<br>
-                Oct 2021 - Present</span>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Number of employees:
-                300+</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://fpt.vn/vi" class="block-team-member-1-link">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <img src="images/logo_fpt_telecom.png" alt="Image" class="img-fluid rounded-circle">
-              </figure>
-              <h3 class="font-size-20 text-white">FPT Telecom</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Android
-                Developer<br>
-                May 2019 - Sep 2021</span>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Number of employees:
-                9.500+</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://www.isb-vietnam.com.vn" class="block-team-member-1-link">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <span class="logo-badge"><img src="images/logo_ivc.jpeg" alt="ISB Vietnam - IVC logo" class="img-fluid"></span>
-              </figure>
-              <h3 class="font-size-20 text-black">ISB Vietnam - IVC</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">iOS - Android
-                Developer<br>
-                May.2018 - Apr.2019</span>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Number of employees:
-                300+</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
-          <a href="https://styl.com.sg" class="block-team-member-1-link">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <span class="logo-badge"><img src="images/logo_styl.jpeg" alt="STYL Solutions logo" class="img-fluid"></span>
-              </figure>
-              <h3 class="font-size-20 text-black">STYL Solutions</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Android Developer
-                (Intern)<br>Jul.2017 - Nov.2017</span>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Number of employees:
-                30+</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Projects ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="projects-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>Projects</h2>
-            <p>Below are some of my main projects</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-5">
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
-          <div class="pricing">
-            <h3 class="text-primary">FPT Play</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android Application</li>
-              <li>Customer: FPT Telecom</li>
-              <li>Description: Watch television, films, tv show</li>
-              <li class="remove">Team size: 6+</li>
-              <li class="remove">My position: Android Developer - Team lead</li>
-              <li class="remove">My responsibilities: Team collaborator
-                Planning timeline, allocating resource, implementing features
-                Provide technical guidance, support other team members, review code</li>
-              <li class="remove">Technologies: Kotlin – MVVM + MVI - Coroutine – Flow – Retrofit – Hilt – Room – Exoplayer2 – Navigation Component – Clevertap – Google Services</li>
+            <ul class="tags">
+              <li>Team lead</li><li>Code review</li><li>Mentoring</li><li>Self-learning</li>
             </ul>
-            <p class="text-center">
-              <a href="https://play.google.com/store/apps/details?id=com.fplay.activity" target="_blank"
-                class="btn btn-secondary btn-md">View app</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="pricing">
-            <h3 class="text-primary">FPT TV Remote</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android Application</li>
-              <li>Customer: FPT Telecom</li>
-              <li>Description: Turn mobile into a smart remote for FPT Box C</li>
-              <li class="remove">Team size: 5</li>
-              <li class="remove">My position: Android Developer – Representative member</li>
-              <li class="remove">My responsibilities: Team collaborator Implementing features
-                Provide technical guidance, support other team members</li>
-              <li class="remove">Technologies: Kotlin – MVVM – Retrofit – RxKotlin – Coroutine – Flow – Socket – Hilt – Google Services
-              </li>
-            </ul>
-            <p class="text-center">
-              <a href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.rca" target="_blank"
-                class="btn btn-secondary btn-md">View app</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="pricing">
-            <h3 class="text-primary">FPlayer</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android Library</li>
-              <li>Customer: FPT Telecom</li>
-              <li>Description: Player library, used to play media content like Video/Audio/Subtitle based on Exoplayer
-                from Google</li>
-              <li class="remove">Team size: 3</li>
-              <li class="remove">My position: Android Developer</li>
-              <li class="remove">My responsibilities: Implementing features – Writing instructions, documents</li>
-              <li class="remove">Technologies: Kotlin – RxKotlin – Exoplayer</li>
-            </ul>
-          </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="row mb-5">
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
-          <div class="pricing">
-            <h3 class="text-primary">Foxy</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android Application</li>
-              <li>Customer: FPT Telecom</li>
-              <li>Description: Watch TV/Movies online application</li>
-              <li class="remove">Team size: 6</li>
-              <li class="remove">My position: Developer</li>
-              <li class="remove">My responsibilities: Fix bugs</li>
-              <li class="remove">Technologies: Kotlin with MVVM structure - Hilt, Retrofit + Coroutine, Firebase</li>
-            </ul>
-            <p class="text-center">
-              <a href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.foxy" target="_blank"
-                class="btn btn-secondary btn-md">View app</a>
-            </p>
-          </div>
-        </div>
+    <!-- Experience ------------------------------------------------------- -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <p class="section__label reveal">03 — Experience</p>
+        <h2 class="section__title reveal">Where I've worked</h2>
+        <p class="section__intro reveal">
+          <span data-years="total">8.5</span> years across companies of very different sizes and cultures,
+          including over <span data-years="lead">4.5</span> years as a team&nbsp;lead.
+        </p>
 
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="pricing">
-            <h3 class="text-primary">7Pay</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android and iOS Native Application</li>
-              <li>Customer: ISB</li>
-              <li>Description: Manage user's banking cards, charge, payment, sharing money with other people.</li>
-              <li class="remove">Team size: 15+</li>
-              <li class="remove">My position: Developer</li>
-              <li class="remove">My responsibilities: Create UI and handle user's interactions follow specs</li>
-              <li class="remove">Technologies: Java – MVP – RxJava – Retrofit</li>
-            </ul>
-            <p class="text-center">
-              Application only available in Japan
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="pricing">
-            <h3 class="text-primary">Smart Buddy</h3>
-            <ul class="list-unstyled mb-5">
-              <li>Type: Android Application</li>
-              <li>Customer: STYL</li>
-              <li>Description: This is the app that helps parent tracking and manages their children (Health, Position,
-                Wallet, ...)</li>
-              <li class="remove">Team size: 4</li>
-              <li class="remove">My position: Android Developer (Internship trainee)</li>
-              <li class="remove">My responsibilities: Create UI and handle user's interactions follow specs, communicate
-                with server</li>
-              <li class="remove">Technologies: Java – MVC – RxJava – Retrofit – Realm DB – BLE – Google Services</li>
-            </ul>
-            <p class="text-center">
-              <a href="https://play.google.com/store/apps/details?id=com.nets.smartbuddy" target="_blank"
-                class="btn btn-secondary btn-md">View app</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="site-section" id="education-section">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-              <h2>Education</h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="images/fptplaylogo.png" alt="FPT Play logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>FPT Play</h3>
+                <span class="chip chip--now">Oct 2021 — Present</span>
+              </div>
+              <p class="timeline__role">Android Developer — Team Lead</p>
+              <p>Team coordination, code reviews, technical guidance, and hands-on feature work on the
+                flagship streaming app.</p>
+              <p class="timeline__meta">300+ employees · <a href="https://fptplay.vn" target="_blank" rel="noopener">fptplay.vn</a></p>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-primary h4 mb-4">University of Information Technology (UIT)</h3>
-              <p>I have finished my university as a Computer science in Honor Program with a very good
-                degree<br><br>My GPA: 8.08 / 10</p>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="images/logo_fpt_telecom.png" alt="FPT Telecom logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>FPT Telecom</h3>
+                <span class="chip">May 2019 — Sep 2021</span>
+              </div>
+              <p class="timeline__role">Android Developer</p>
+              <p>Built and shipped Android applications across the television product line, implementing
+                features and supporting other team members.</p>
+              <p class="timeline__meta">9,500+ employees · <a href="https://fpt.vn/vi" target="_blank" rel="noopener">fpt.vn</a></p>
             </div>
+          </li>
 
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-primary h4 mb-4">Toeic (2018)</h3>
-              <p>Listening: 445</p>
-              <p>Reading: 325</p>
-              <p>Total: 770</p>
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="images/logo_ivc.jpeg" alt="ISB Vietnam logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>ISB Vietnam — IVC</h3>
+                <span class="chip">May 2018 — Apr 2019</span>
+              </div>
+              <p class="timeline__role">iOS &amp; Android Developer</p>
+              <p>Developed native applications on both platforms for the Japanese market, including self
+                testing and bug fixing.</p>
+              <p class="timeline__meta">300+ employees · <a href="https://www.isb-vietnam.com.vn" target="_blank" rel="noopener">isb-vietnam.com.vn</a></p>
             </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="images/logo_styl.jpeg" alt="STYL Solutions logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>STYL Solutions</h3>
+                <span class="chip">Jul 2017 — Nov 2017</span>
+              </div>
+              <p class="timeline__role">Android Developer (Intern)</p>
+              <p>First professional role — building Android features against specs and learning how a product
+                team actually operates.</p>
+              <p class="timeline__meta">30+ employees · <a href="https://styl.com.sg" target="_blank" rel="noopener">styl.com.sg</a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects --------------------------------------------------------- -->
+    <section class="section section--alt" id="projects">
+      <div class="wrap">
+        <p class="section__label reveal">04 — Projects</p>
+        <h2 class="section__title reveal">Things I've built</h2>
+
+        <div class="grid grid--projects">
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPT Play</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Watch television, films and TV shows. The flagship streaming product, where I lead the app team.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM + MVI</li><li>Coroutines</li><li>Flow</li><li>Hilt</li>
+              <li>Room</li><li>ExoPlayer2</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.fplay.activity"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPT TV Remote</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Turns a phone into a smart remote for the FPT IPTV box, pairing over the local network.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM</li><li>RxKotlin</li><li>Socket</li><li>Hilt</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.rca"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPlayer</h3>
+              <span class="badge badge--alt">Android library</span>
+            </div>
+            <p>An internal player library for video, audio and subtitles, built on top of Google's ExoPlayer
+              and documented for other teams to adopt.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>RxKotlin</li><li>ExoPlayer</li>
+            </ul>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">Foxy</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>A TV and movie streaming application within the FPT Telecom family of products.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM</li><li>Hilt</li><li>Retrofit</li><li>Firebase</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.foxy"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">7Pay</h3>
+              <span class="badge badge--alt">iOS &amp; Android</span>
+            </div>
+            <p>A payments app for the Japanese market — managing banking cards, charging, paying and sending
+              money between people.</p>
+            <ul class="tags">
+              <li>Java</li><li>MVP</li><li>RxJava</li><li>Retrofit</li>
+            </ul>
+            <p class="card__note">Available in Japan only</p>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">Smart Buddy</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Helps parents track and manage their children — health, position and wallet — talking to a
+              wearable over BLE.</p>
+            <ul class="tags">
+              <li>Java</li><li>MVC</li><li>RxJava</li><li>Realm</li><li>BLE</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.nets.smartbuddy"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards ----------------------------------------------------------- -->
+    <section class="section" id="awards">
+      <div class="wrap">
+        <p class="section__label reveal">05 — Recognition</p>
+        <h2 class="section__title reveal">Awards &amp; recognition</h2>
+
+        <div class="grid grid--awards">
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="images/personal_y_2025.png"
+              aria-label="View the 2025 Excellent Individual certificate">
+              <img src="images/personal_y_2025.png" alt="Excellent Individual of the Year 2025 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Excellent Individual of the Year</b>
+              <span>FPT Play · 2025</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="images/AI_context_2024.png"
+              aria-label="View the 2024 GenAI Hackathon award">
+              <img src="images/AI_context_2024.png" alt="GenAI Hackathon 2024 second place" loading="lazy">
+            </button>
+            <figcaption>
+              <b>GenAI Hackathon — 2nd Place</b>
+              <span>FPT Play · 2024</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="images/personal_y_2023.jpg"
+              aria-label="View the 2023 Excellent Individual certificate">
+              <img src="images/personal_y_2023.jpg" alt="Excellent Individual of the Year 2023 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Excellent Individual of the Year</b>
+              <span>FPT Play · 2023</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="images/personal_q_2022.png"
+              aria-label="View the Q1 2022 Outstanding Foxer certificate">
+              <img src="images/personal_q_2022.png" alt="Outstanding Foxer Q1 2022 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Outstanding Foxer</b>
+              <span>FPT Telecom · Q1 2022</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="edu reveal">
+          <h3 class="card__title">Education</h3>
+          <div class="edu__grid">
+            <div>
+              <b>University of Information Technology (UIT)</b>
+              <span>Computer Science — Honor Program · Aug 2014 – Dec 2018</span>
+            </div>
+            <div><b>GPA</b><span>8.08 / 10</span></div>
+            <div><b>TOEIC (2018)</b><span>770 — Listening 445 · Reading 325</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Prizes ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="prizes-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>Prizes &amp; Recognition</h2>
-            <p>Some prizes and recognition I have received along the way, from newest to oldest.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-          <div class="prize-item text-center">
-            <figure>
-              <img src="images/personal_y_2025.png" alt="Excellent Individual of the Year 2025 certificate from FPT Play" class="img-fluid">
-            </figure>
-            <h3 class="font-size-16 text-white">Excellent Individual of the Year</h3>
-            <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12">FPT Play — 2025</span>
-          </div>
-        </div>
+    <!-- Writing ---------------------------------------------------------- -->
+    <section class="section section--alt" id="writing">
+      <div class="wrap">
+        <p class="section__label reveal">06 — Writing</p>
+        <h2 class="section__title reveal">From my blog</h2>
+        <p class="section__intro reveal">
+          I write about the problems that were annoying enough to document.
+          <a href="https://dzungvu.medium.com" target="_blank" rel="noopener">All posts on Medium →</a>
+        </p>
 
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="prize-item text-center">
-            <figure>
-              <img src="images/AI_context_2024.png" alt="FPT Play GenAI Hackathon 2024 winning teams - 2nd place" class="img-fluid">
-            </figure>
-            <h3 class="font-size-16 text-white">GenAI Hackathon — 2nd Place</h3>
-            <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12">FPT Play — 2024</span>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="prize-item text-center">
-            <figure>
-              <img src="images/personal_y_2023.jpg" alt="Excellent Individual of the Year 2023 certificate from FPT Play" class="img-fluid">
-            </figure>
-            <h3 class="font-size-16 text-white">Excellent Individual of the Year</h3>
-            <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12">FPT Play — 2023</span>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="prize-item text-center">
-            <figure>
-              <img src="images/personal_q_2022.png" alt="Foxers Sieu Dang Q1/2022 recognition from FPT Telecom" class="img-fluid">
-            </figure>
-            <h3 class="font-size-16 text-white">Outstanding Foxer (Foxers Siêu Đẳng)</h3>
-            <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12">FPT Telecom — Q1 2022</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Blogs ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="blog-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center mb-5">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <span>Latest Blog Posts</span>
-            <h2>My Blog</h2>
-            <span>(Connect to VPN if you can't access the site)</span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div>
-            <h2><a
-                href="https://dzungvu.medium.com/say-goodbye-to-port-forwarding-why-tailscale-is-the-future-of-home-networking-5034f1e207d2">Say
-                Goodbye to Port Forwarding: Why Tailscale is the Future of Home Networking</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Mar 20, 2026</span></p>
-            <p>Having used Tailscale for some time now, I've found that it makes life much easier. Since I started
-              building my home server last year, I've relied on Tailscale to connect all my devices into my own
+        <div class="grid grid--posts">
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/say-goodbye-to-port-forwarding-why-tailscale-is-the-future-of-home-networking-5034f1e207d2"
+            target="_blank" rel="noopener">
+            <time>Mar 20, 2026</time>
+            <h3>Say Goodbye to Port Forwarding: Why Tailscale is the Future of Home Networking</h3>
+            <p>Since I started building my home server, Tailscale has connected all my devices into one
               private, global network.</p>
-            <p><a
-                href="https://dzungvu.medium.com/say-goodbye-to-port-forwarding-why-tailscale-is-the-future-of-home-networking-5034f1e207d2"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
 
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <div>
-            <h2><a
-                href="https://dzungvu.medium.com/openclaw-with-free-local-web-search-searxng-db52348b7d34">Openclaw
-                with free local web search — SearXNG</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Mar 14, 2026</span></p>
-            <p>Hi there, I've spent a few weekend-days to setup my Openclaw. And now I want to share how I enable the
-              websearch function in openclaw without any API key from any provider.</p>
-            <p><a
-                href="https://dzungvu.medium.com/openclaw-with-free-local-web-search-searxng-db52348b7d34"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/openclaw-with-free-local-web-search-searxng-db52348b7d34"
+            target="_blank" rel="noopener">
+            <time>Mar 14, 2026</time>
+            <h3>OpenClaw with free local web search — SearXNG</h3>
+            <p>How to enable web search in OpenClaw without an API key from any provider.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
 
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div>
-            <h2><a
-                href="https://dzungvu.medium.com/android-development-how-to-build-ffmpeg-extension-for-integrating-into-exoplayer-5fe6a771ea89">How
-                to build Ffmpeg extension for integrating into Exoplayer</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Aug 5, 2021</span></p>
-            <p>I’ve just met a problem with Exoplayer in using to playing UDP stream. Video is coming but the audio is
-              not. Then I start to searching for the reason. Very firstly you can find this
-              https://github.com/google/ExoPlayer/issues/6843. But I asked video-encoder team and they answered me that
-              they are using AAC, not Ffmpeg.</p>
-            <p><a
-                href="https://dzungvu.medium.com/android-development-how-to-build-ffmpeg-extension-for-integrating-into-exoplayer-5fe6a771ea89"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-make-bundletool-portable-cf5801c4886a"
+            target="_blank" rel="noopener">
+            <time>Jun 24, 2023</time>
+            <h3>[Android Development] Make Bundletool Portable</h3>
+            <p>Google requires App Bundle for new apps, but older APK-based apps can still ship — here's how to
+              bridge the two.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
 
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <div>
-            <h2><a
-                href="https://dzungvu.medium.com/flutter-development-personal-flutter-project-structure-with-repository-pattern-demo-app-8b1b32daeb10">Personal
-                Flutter Project structure with Repository pattern — Demo app</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Sep 9, 2021</span></p>
-            <p>It is based on MVC Structure. But it has a bit different when I am not using any interface (or delegate)
-              to make the Controller implemented on it. As an addition info, I will write this project with GetX for
-              State management</p>
-            <p><a
-                href="https://dzungvu.medium.com/flutter-development-personal-flutter-project-structure-with-repository-pattern-demo-app-8b1b32daeb10"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/flutter-development-personal-flutter-project-structure-with-repository-pattern-demo-app-8b1b32daeb10"
+            target="_blank" rel="noopener">
+            <time>Sep 9, 2021</time>
+            <h3>Personal Flutter Project Structure with Repository Pattern</h3>
+            <p>An MVC-based structure that skips the interface layer, using GetX for state management.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
 
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <div>
-            <h2><a href="https://dzungvu.medium.com/android-development-make-bundletool-portable-cf5801c4886a">[Android
-                Development] Make Bundletool Portable</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Jun 24, 2023</span></p>
-            <p>Google have required developer to publish their app to play store with Android App Bundle since August,
-              2021.
-              But for the exist apps which had been uploaded before that time with apk format can be continued deliver
-              to play store with apk.</p>
-            <p><a href="https://dzungvu.medium.com/android-development-make-bundletool-portable-cf5801c4886a"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-how-to-build-ffmpeg-extension-for-integrating-into-exoplayer-5fe6a771ea89"
+            target="_blank" rel="noopener">
+            <time>Aug 5, 2021</time>
+            <h3>How to build the FFmpeg extension for ExoPlayer</h3>
+            <p>UDP streams played video but no audio. Tracking down why led straight into building the FFmpeg
+              extension.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
 
-        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <div>
-            <h2><a
-                href="https://dzungvu.medium.com/android-development-import-a-library-into-android-project-f063ae9d40f4">[Android
-                development] Import .a library into Android project</a></h2>
-            <p class="text-muted mb-3 text-uppercase small"><span class="mr-2">Jul 6, 2021</span></p>
-            <p>Another topic that not to many people have to face on. Today’s article is how I import a .a file into
-              android project.
-              I don’t know why but it seems to be very rare article that write about this. And some of them are useless
-              for me.
-              So I think I have to write this down.</p>
-            <p><a
-                href="https://dzungvu.medium.com/android-development-import-a-library-into-android-project-f063ae9d40f4"
-                target="_blank">Read More</a></p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Rewards ------------------------------------------------------------------------------------------------->
-  <!-- <div class="site-section" id="rewards-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-7">
-          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-            <h2>Rewards</h2>
-            <p>Below are some of my working rewards</p>
-          </div>
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-import-a-library-into-android-project-f063ae9d40f4"
+            target="_blank" rel="noopener">
+            <time>Jul 6, 2021</time>
+            <h3>[Android Development] Import a .a library into an Android project</h3>
+            <p>A rare enough problem that the existing articles weren't much help — so I wrote it down.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
         </div>
       </div>
-      <button type="button" class="collapsible" data-aos="fade-up" data-aos-delay="">Click to view detail</button>
-      <div class="collapsiblecontent">
-        <div class="row">
-          <div class="column" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-          </div>
-          <div class="column">
-            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+    </section>
 
+    <!-- Contact ---------------------------------------------------------- -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <p class="section__label reveal">07 — Contact</p>
+        <h2 class="section__title reveal">Let's talk</h2>
+        <p class="section__intro reveal">
+          The fastest way to reach me is email or WhatsApp. I read everything.
+        </p>
 
-  <!-- Contact ------------------------------------------------------------------------------------------------->
-  <div class="site-section" id="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="block-heading-1">
-            <span>Get In Touch</span>
-            <h2>Contact Me</h2>
-            <h5>My email</h5>
-            <p><a href="mailto:dzungvucs@gmail.com">dzungvucs@gmail.com</a></p>
-            <h5>My WhatsApp</h5>
-            <p><a href="images/wa.png" data-fancybox
-                data-caption='Scan to chat with me on WhatsApp<br><a href="https://wa.me/qr/Y6XLHH66TCKGJ1" target="_blank" rel="noopener">Or click here to open WhatsApp</a>'
-                class="whatsapp-link">Thế Dũng<span
-                  class="whatsapp-preview"><img src="images/wa.png" alt="WhatsApp contact QR code"></span></a></p>
+        <div class="contact reveal">
+          <div class="contact__primary">
+            <div class="contact__row">
+              <span class="contact__label">Email</span>
+              <a class="contact__value" href="mailto:dzungvucs@gmail.com">dzungvucs@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="dzungvucs@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="11" height="11" rx="2" />
+                  <path d="M5 15V6a2 2 0 0 1 2-2h8" />
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <div class="contact__row">
+              <span class="contact__label">WhatsApp</span>
+              <a class="contact__value" href="https://wa.me/qr/Y6XLHH66TCKGJ1" target="_blank" rel="noopener">Thế Dũng</a>
+              <button class="copy-btn" type="button" data-lightbox="images/wa.png">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="4" width="6" height="6" rx="1" />
+                  <rect x="14" y="4" width="6" height="6" rx="1" />
+                  <rect x="4" y="14" width="6" height="6" rx="1" />
+                  <path d="M14 14h2v2h-2zM18 14h2M14 18h2M18 18h2" />
+                </svg>
+                <span>QR</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact__links">
+            <a class="social" href="https://github.com/dzungvu" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="social" href="https://www.linkedin.com/in/dzungvucs" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.4 8.4h3.1V21H3.4zM9.1 8.4h2.97v1.72h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.1v-5.86c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.1z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social" href="https://dzungvu.medium.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M6.8 7.2a.75.75 0 0 0-.25-.63L4.7 4.34V4h5.73l4.43 9.71L18.75 4H24v.34l-1.58 1.51a.46.46 0 0 0-.18.44v11.09a.46.46 0 0 0 .18.44L24 19.33V19.7h-7.94v-.37l1.63-1.59c.16-.16.16-.2.16-.44V8.34l-4.54 11.32h-.61L7.47 8.34v7.59c-.04.32.06.64.29.87l2.13 2.58v.32H0v-.32l2.13-2.58c.22-.23.32-.55.27-.87z"/></svg>
+              <span>Medium</span>
+            </a>
+            <a class="social" href="https://www.hackerrank.com/thedung2709" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3.5 7v10L12 22l8.5-5V7L12 2z" /><path d="M9.5 9v6M14.5 9v6M9.5 12h5" /></svg>
+              <span>HackerRank</span>
+            </a>
+            <a class="social" href="https://www.facebook.com/thedungit.cs/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.55.45-1 1-1z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a class="social" href="https://www.instagram.com/thedungit.cs/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" /></svg>
+              <span>Instagram</span>
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-primary">View my other profiles</h2>
-        <h5>My Github</h5>
-        <p><a href="https://github.com/dzungvu" target="_blank">dzungvu</a></p>
-        <h5>My LinkedIn</h5>
-        <p><a href="https://www.linkedin.com/in/dzungvucs" target="_blank">dzungvu</a></p>
-        <h5>My HackerRank</h5>
-        <p><a href="https://www.hackerrank.com/thedung2709" target="_blank">dzungvu</a></p>
-        <div class="block-social-1">
-          <a href="https://www.facebook.com/thedungit.cs/"
-            class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-          <a href="https://www.instagram.com/thedungit.cs/"
-            class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="copyright"><small>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          To keep this simple, the main skeleton of this site is from Colorlib. <br>
-          Copyright &copy;
-          <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-            class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
-            target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </small></p>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Vũ Thế Dũng</p>
+      <p><a href="v1/index.html">View the classic version →</a></p>
     </div>
   </footer>
 
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+  </button>
+
+  <!-- Lightbox for certificates and the WhatsApp QR -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js"></script>
+  <script src="assets/main.js"></script>
 
-  <!--GA4-->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6Y3CFXDEG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M6Y3CFXDEG');
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6Y3CFXDEG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M6Y3CFXDEG');
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vũ Thế Dũng — Android Developer</title>
+  <meta name="description"
+    content="Vũ Thế Dũng (DungVu) — Android Developer in Ho Chi Minh City. Kotlin, Jetpack Compose, and 8+ years building mobile products.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Set the theme before first paint so the page never flashes the wrong one.
+       The `js` class gates the scroll-reveal styles, so content stays visible
+       if scripting is unavailable. -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.dataset.theme = stored || (prefersLight ? 'light' : 'dark');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark">DV</span>
+        <span class="nav__name">Vũ Thế Dũng</span>
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z" />
+          </svg>
+        </button>
+        <a class="btn btn--sm" href="../files/vu_the_dung_cv.pdf" id="cv-download" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 19h16" />
+          </svg>
+          <span>CV</span>
+        </a>
+        <button class="icon-btn nav__burger" id="nav-toggle" type="button" aria-label="Open menu"
+          aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero ------------------------------------------------------------- -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="hero__eyebrow reveal">
+          <span class="dot"></span> Available for interesting work
+        </p>
+        <h1 class="hero__title reveal">
+          Building Android apps<br>that <em>millions</em> actually use.
+        </h1>
+        <p class="hero__lead reveal">
+          I'm <strong>Vũ Thế Dũng</strong> — an Android developer in Ho Chi Minh City with
+          <span data-years="total">8.5</span> years in mobile, currently leading the app team at FPT Play.
+          I work mostly in Kotlin, Jetpack Compose, and increasingly alongside AI tooling.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#contact">
+            Get in touch
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a class="btn" href="#projects">See my work</a>
+        </div>
+
+        <dl class="stats reveal">
+          <div class="stat">
+            <dt>Years in mobile</dt>
+            <dd><span data-years="total">8.5</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Years on Android</dt>
+            <dd><span data-years="android">7.5</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Years leading</dt>
+            <dd><span data-years="lead">4.5</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Awards</dt>
+            <dd>4</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- About ------------------------------------------------------------ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <p class="section__label reveal">01 — About</p>
+        <div class="about">
+          <div class="reveal">
+            <h2 class="section__title">A developer who likes shipping things that last.</h2>
+            <p class="prose">
+              My full name is Vũ Thế Dũng. I hold a Bachelor's degree in Computer Science from the
+              University of Information Technology (UIT) and I'm based in Ho Chi Minh City.
+            </p>
+            <p class="prose">
+              I started in native iOS for a year, moved to Android, and have stayed there since — with a
+              detour through Flutter. These days I lead a mobile team, which means as much code review and
+              technical guidance as feature work.
+            </p>
+            <p class="prose">
+              My goal is to keep growing into a genuinely professional engineer: refining how I think about
+              software, and leaving every product better than I found it.
+            </p>
+          </div>
+          <aside class="card card--quiet reveal">
+            <h3 class="card__title">At a glance</h3>
+            <ul class="facts">
+              <li><span>Location</span><b>Ho Chi Minh City, VN</b></li>
+              <li><span>Role</span><b>Android Developer</b></li>
+              <li><span>Focus</span><b>Kotlin · Compose</b></li>
+              <li><span>Also</span><b>Flutter · AI tooling</b></li>
+              <li><span>English</span><b>TOEIC 770</b></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills ----------------------------------------------------------- -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <p class="section__label reveal">02 — Skills</p>
+        <h2 class="section__title reveal">What I work with</h2>
+
+        <div class="grid grid--skills">
+          <article class="card reveal">
+            <h3 class="card__title">Languages &amp; core</h3>
+            <p>Strong foundation in OOP and common design patterns, applied daily across production apps.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>Java</li><li>Dart</li><li>OOP</li><li>Design patterns</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Android platform</h3>
+            <p>UI in both Jetpack Compose and XML, plus the Google services that ship alongside it.</p>
+            <ul class="tags">
+              <li>Jetpack Compose</li><li>XML views</li><li>Coroutines</li><li>Flow</li>
+              <li>Play Console</li><li>FCM</li><li>Crashlytics</li><li>Billing</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Data &amp; networking</h3>
+            <p>Web service integration over SOAP, REST, JSON and XML, with local persistence to match.</p>
+            <ul class="tags">
+              <li>Retrofit</li><li>OkHttp3</li><li>Room</li><li>SQLite</li><li>Realm</li><li>Reactive</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Architecture &amp; tooling</h3>
+            <p>Structuring apps so they stay testable, plus the pipeline that gets them to users.</p>
+            <ul class="tags">
+              <li>MVVM</li><li>MVI</li><li>MVP</li><li>Hilt</li><li>Git</li><li>Jenkins</li>
+              <li>Proxyman</li><li>Jira</li>
+            </ul>
+          </article>
+
+          <article class="card card--accent reveal">
+            <h3 class="card__title">AI-assisted development</h3>
+            <p>
+              Proficient with tools such as Claude and Codex. Experienced in the Model Context Protocol (MCP),
+              building custom skills, and working with AI agents such as OpenClaw and Hermes.
+            </p>
+            <ul class="tags">
+              <li>Claude</li><li>Codex</li><li>MCP</li><li>Custom skills</li><li>Agents</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3 class="card__title">Working with people</h3>
+            <p>
+              Collaborating across Product, Design, Backend, System and QA; reviewing code and supporting
+              teammates; and staying deliberately curious about new technology.
+            </p>
+            <ul class="tags">
+              <li>Team lead</li><li>Code review</li><li>Mentoring</li><li>Self-learning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience ------------------------------------------------------- -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <p class="section__label reveal">03 — Experience</p>
+        <h2 class="section__title reveal">Where I've worked</h2>
+        <p class="section__intro reveal">
+          <span data-years="total">8.5</span> years across companies of very different sizes and cultures,
+          including over <span data-years="lead">4.5</span> years as a team&nbsp;lead.
+        </p>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="../images/fptplaylogo.png" alt="FPT Play logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>FPT Play</h3>
+                <span class="chip chip--now">Oct 2021 — Present</span>
+              </div>
+              <p class="timeline__role">Android Developer — Team Lead</p>
+              <p>Team coordination, code reviews, technical guidance, and hands-on feature work on the
+                flagship streaming app.</p>
+              <p class="timeline__meta">300+ employees · <a href="https://fptplay.vn" target="_blank" rel="noopener">fptplay.vn</a></p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="../images/logo_fpt_telecom.png" alt="FPT Telecom logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>FPT Telecom</h3>
+                <span class="chip">May 2019 — Sep 2021</span>
+              </div>
+              <p class="timeline__role">Android Developer</p>
+              <p>Built and shipped Android applications across the television product line, implementing
+                features and supporting other team members.</p>
+              <p class="timeline__meta">9,500+ employees · <a href="https://fpt.vn/vi" target="_blank" rel="noopener">fpt.vn</a></p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="../images/logo_ivc.jpeg" alt="ISB Vietnam logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>ISB Vietnam — IVC</h3>
+                <span class="chip">May 2018 — Apr 2019</span>
+              </div>
+              <p class="timeline__role">iOS &amp; Android Developer</p>
+              <p>Developed native applications on both platforms for the Japanese market, including self
+                testing and bug fixing.</p>
+              <p class="timeline__meta">300+ employees · <a href="https://www.isb-vietnam.com.vn" target="_blank" rel="noopener">isb-vietnam.com.vn</a></p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__logo"><img src="../images/logo_styl.jpeg" alt="STYL Solutions logo" loading="lazy"></div>
+            <div class="timeline__body">
+              <div class="timeline__head">
+                <h3>STYL Solutions</h3>
+                <span class="chip">Jul 2017 — Nov 2017</span>
+              </div>
+              <p class="timeline__role">Android Developer (Intern)</p>
+              <p>First professional role — building Android features against specs and learning how a product
+                team actually operates.</p>
+              <p class="timeline__meta">30+ employees · <a href="https://styl.com.sg" target="_blank" rel="noopener">styl.com.sg</a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects --------------------------------------------------------- -->
+    <section class="section section--alt" id="projects">
+      <div class="wrap">
+        <p class="section__label reveal">04 — Projects</p>
+        <h2 class="section__title reveal">Things I've built</h2>
+
+        <div class="grid grid--projects">
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPT Play</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Watch television, films and TV shows. The flagship streaming product, where I lead the app team.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM + MVI</li><li>Coroutines</li><li>Flow</li><li>Hilt</li>
+              <li>Room</li><li>ExoPlayer2</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.fplay.activity"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPT TV Remote</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Turns a phone into a smart remote for the FPT IPTV box, pairing over the local network.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM</li><li>RxKotlin</li><li>Socket</li><li>Hilt</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.rca"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">FPlayer</h3>
+              <span class="badge badge--alt">Android library</span>
+            </div>
+            <p>An internal player library for video, audio and subtitles, built on top of Google's ExoPlayer
+              and documented for other teams to adopt.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>RxKotlin</li><li>ExoPlayer</li>
+            </ul>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">Foxy</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>A TV and movie streaming application within the FPT Telecom family of products.</p>
+            <ul class="tags">
+              <li>Kotlin</li><li>MVVM</li><li>Hilt</li><li>Retrofit</li><li>Firebase</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=vn.fpt.truyenhinh.foxy"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">7Pay</h3>
+              <span class="badge badge--alt">iOS &amp; Android</span>
+            </div>
+            <p>A payments app for the Japanese market — managing banking cards, charging, paying and sending
+              money between people.</p>
+            <ul class="tags">
+              <li>Java</li><li>MVP</li><li>RxJava</li><li>Retrofit</li>
+            </ul>
+            <p class="card__note">Available in Japan only</p>
+          </article>
+
+          <article class="card card--project reveal">
+            <div class="card__top">
+              <h3 class="card__title">Smart Buddy</h3>
+              <span class="badge">Android app</span>
+            </div>
+            <p>Helps parents track and manage their children — health, position and wallet — talking to a
+              wearable over BLE.</p>
+            <ul class="tags">
+              <li>Java</li><li>MVC</li><li>RxJava</li><li>Realm</li><li>BLE</li>
+            </ul>
+            <a class="card__link" href="https://play.google.com/store/apps/details?id=com.nets.smartbuddy"
+              target="_blank" rel="noopener">
+              View on Play Store
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards ----------------------------------------------------------- -->
+    <section class="section" id="awards">
+      <div class="wrap">
+        <p class="section__label reveal">05 — Recognition</p>
+        <h2 class="section__title reveal">Awards &amp; recognition</h2>
+
+        <div class="grid grid--awards">
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="../images/personal_y_2025.png"
+              aria-label="View the 2025 Excellent Individual certificate">
+              <img src="../images/personal_y_2025.png" alt="Excellent Individual of the Year 2025 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Excellent Individual of the Year</b>
+              <span>FPT Play · 2025</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="../images/AI_context_2024.png"
+              aria-label="View the 2024 GenAI Hackathon award">
+              <img src="../images/AI_context_2024.png" alt="GenAI Hackathon 2024 second place" loading="lazy">
+            </button>
+            <figcaption>
+              <b>GenAI Hackathon — 2nd Place</b>
+              <span>FPT Play · 2024</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="../images/personal_y_2023.jpg"
+              aria-label="View the 2023 Excellent Individual certificate">
+              <img src="../images/personal_y_2023.jpg" alt="Excellent Individual of the Year 2023 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Excellent Individual of the Year</b>
+              <span>FPT Play · 2023</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award reveal">
+            <button class="award__shot" type="button" data-lightbox="../images/personal_q_2022.png"
+              aria-label="View the Q1 2022 Outstanding Foxer certificate">
+              <img src="../images/personal_q_2022.png" alt="Outstanding Foxer Q1 2022 certificate" loading="lazy">
+            </button>
+            <figcaption>
+              <b>Outstanding Foxer</b>
+              <span>FPT Telecom · Q1 2022</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="edu reveal">
+          <h3 class="card__title">Education</h3>
+          <div class="edu__grid">
+            <div>
+              <b>University of Information Technology (UIT)</b>
+              <span>Computer Science — Honor Program · Aug 2014 – Dec 2018</span>
+            </div>
+            <div><b>GPA</b><span>8.08 / 10</span></div>
+            <div><b>TOEIC (2018)</b><span>770 — Listening 445 · Reading 325</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing ---------------------------------------------------------- -->
+    <section class="section section--alt" id="writing">
+      <div class="wrap">
+        <p class="section__label reveal">06 — Writing</p>
+        <h2 class="section__title reveal">From my blog</h2>
+        <p class="section__intro reveal">
+          I write about the problems that were annoying enough to document.
+          <a href="https://dzungvu.medium.com" target="_blank" rel="noopener">All posts on Medium →</a>
+        </p>
+
+        <div class="grid grid--posts">
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/say-goodbye-to-port-forwarding-why-tailscale-is-the-future-of-home-networking-5034f1e207d2"
+            target="_blank" rel="noopener">
+            <time>Mar 20, 2026</time>
+            <h3>Say Goodbye to Port Forwarding: Why Tailscale is the Future of Home Networking</h3>
+            <p>Since I started building my home server, Tailscale has connected all my devices into one
+              private, global network.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/openclaw-with-free-local-web-search-searxng-db52348b7d34"
+            target="_blank" rel="noopener">
+            <time>Mar 14, 2026</time>
+            <h3>OpenClaw with free local web search — SearXNG</h3>
+            <p>How to enable web search in OpenClaw without an API key from any provider.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-make-bundletool-portable-cf5801c4886a"
+            target="_blank" rel="noopener">
+            <time>Jun 24, 2023</time>
+            <h3>[Android Development] Make Bundletool Portable</h3>
+            <p>Google requires App Bundle for new apps, but older APK-based apps can still ship — here's how to
+              bridge the two.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/flutter-development-personal-flutter-project-structure-with-repository-pattern-demo-app-8b1b32daeb10"
+            target="_blank" rel="noopener">
+            <time>Sep 9, 2021</time>
+            <h3>Personal Flutter Project Structure with Repository Pattern</h3>
+            <p>An MVC-based structure that skips the interface layer, using GetX for state management.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-how-to-build-ffmpeg-extension-for-integrating-into-exoplayer-5fe6a771ea89"
+            target="_blank" rel="noopener">
+            <time>Aug 5, 2021</time>
+            <h3>How to build the FFmpeg extension for ExoPlayer</h3>
+            <p>UDP streams played video but no audio. Tracking down why led straight into building the FFmpeg
+              extension.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+
+          <a class="post reveal"
+            href="https://dzungvu.medium.com/android-development-import-a-library-into-android-project-f063ae9d40f4"
+            target="_blank" rel="noopener">
+            <time>Jul 6, 2021</time>
+            <h3>[Android Development] Import a .a library into an Android project</h3>
+            <p>A rare enough problem that the existing articles weren't much help — so I wrote it down.</p>
+            <span class="post__more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact ---------------------------------------------------------- -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <p class="section__label reveal">07 — Contact</p>
+        <h2 class="section__title reveal">Let's talk</h2>
+        <p class="section__intro reveal">
+          The fastest way to reach me is email or WhatsApp. I read everything.
+        </p>
+
+        <div class="contact reveal">
+          <div class="contact__primary">
+            <div class="contact__row">
+              <span class="contact__label">Email</span>
+              <a class="contact__value" href="mailto:dzungvucs@gmail.com">dzungvucs@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="dzungvucs@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="11" height="11" rx="2" />
+                  <path d="M5 15V6a2 2 0 0 1 2-2h8" />
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <div class="contact__row">
+              <span class="contact__label">WhatsApp</span>
+              <a class="contact__value" href="https://wa.me/qr/Y6XLHH66TCKGJ1" target="_blank" rel="noopener">Thế Dũng</a>
+              <button class="copy-btn" type="button" data-lightbox="../images/wa.png">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="4" width="6" height="6" rx="1" />
+                  <rect x="14" y="4" width="6" height="6" rx="1" />
+                  <rect x="4" y="14" width="6" height="6" rx="1" />
+                  <path d="M14 14h2v2h-2zM18 14h2M14 18h2M18 18h2" />
+                </svg>
+                <span>QR</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact__links">
+            <a class="social" href="https://github.com/dzungvu" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="social" href="https://www.linkedin.com/in/dzungvucs" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.4 8.4h3.1V21H3.4zM9.1 8.4h2.97v1.72h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.1v-5.86c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.1z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social" href="https://dzungvu.medium.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M6.8 7.2a.75.75 0 0 0-.25-.63L4.7 4.34V4h5.73l4.43 9.71L18.75 4H24v.34l-1.58 1.51a.46.46 0 0 0-.18.44v11.09a.46.46 0 0 0 .18.44L24 19.33V19.7h-7.94v-.37l1.63-1.59c.16-.16.16-.2.16-.44V8.34l-4.54 11.32h-.61L7.47 8.34v7.59c-.04.32.06.64.29.87l2.13 2.58v.32H0v-.32l2.13-2.58c.22-.23.32-.55.27-.87z"/></svg>
+              <span>Medium</span>
+            </a>
+            <a class="social" href="https://www.hackerrank.com/thedung2709" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3.5 7v10L12 22l8.5-5V7L12 2z" /><path d="M9.5 9v6M14.5 9v6M9.5 12h5" /></svg>
+              <span>HackerRank</span>
+            </a>
+            <a class="social" href="https://www.facebook.com/thedungit.cs/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.55.45-1 1-1z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a class="social" href="https://www.instagram.com/thedungit.cs/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" /></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Vũ Thế Dũng — built from scratch, no template.</p>
+      <p><a href="../index.html">View the classic version →</a></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+  </button>
+
+  <!-- Lightbox for certificates and the WhatsApp QR -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/main.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6Y3CFXDEG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M6Y3CFXDEG');
+  </script>
+</body>
+
+</html>

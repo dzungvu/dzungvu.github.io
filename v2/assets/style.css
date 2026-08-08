@@ -2,8 +2,11 @@
    Design tokens
    ========================================================================== */
 :root {
-  --accent: #ff7a1a;
-  --accent-soft: rgba(255, 122, 26, .14);
+  /* Solid fills that carry dark ink, so they stay identical in both themes.
+     Verified at 4.9:1 (gradient start) to 7.5:1 (end) against --accent-ink. */
+  --accent-grad-a: #2b7fff;
+  --accent-grad-b: #5aa9ff;
+  --accent-ink: #04142e;
   --radius: 16px;
   --radius-sm: 10px;
   --wrap: 1120px;
@@ -13,6 +16,10 @@
 }
 
 html[data-theme='dark'] {
+  /* Light blue: 7.2:1 on surfaces, 5.5:1 on --accent-soft. */
+  --accent: #5aa9ff;
+  --accent-hi: #8ec8ff;
+  --accent-soft: rgba(90, 169, 255, .16);
   --bg: #0a0c10;
   --bg-alt: #0e1117;
   --surface: #141922;
@@ -22,11 +29,15 @@ html[data-theme='dark'] {
   --text: #e9eef6;
   --text-muted: #98a4b8;
   --shadow: 0 18px 40px -22px rgba(0, 0, 0, .9);
-  --glow-1: rgba(255, 122, 26, .22);
-  --glow-2: rgba(56, 130, 255, .16);
+  --glow-1: rgba(90, 169, 255, .22);
+  --glow-2: rgba(122, 108, 255, .16);
 }
 
 html[data-theme='light'] {
+  /* Deeper blue: a dark-mode blue would only reach 2.9:1 on white. */
+  --accent: #0a5fc2;
+  --accent-hi: #2b7fff;
+  --accent-soft: rgba(10, 95, 194, .12);
   --bg: #fbfbfd;
   --bg-alt: #f2f4f8;
   --surface: #ffffff;
@@ -36,8 +47,8 @@ html[data-theme='light'] {
   --text: #101722;
   --text-muted: #5d6b80;
   --shadow: 0 18px 40px -26px rgba(16, 24, 40, .45);
-  --glow-1: rgba(255, 122, 26, .18);
-  --glow-2: rgba(56, 130, 255, .14);
+  --glow-1: rgba(43, 127, 255, .18);
+  --glow-2: rgba(122, 108, 255, .14);
 }
 
 /* ==========================================================================
@@ -149,8 +160,8 @@ svg {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #ff9d4d);
-  color: #1a0d00;
+  background: linear-gradient(135deg, var(--accent-grad-a), var(--accent-grad-b));
+  color: var(--accent-ink);
   font-size: 13px;
   letter-spacing: .04em;
 }
@@ -224,9 +235,9 @@ html[data-theme='light'] .icon-moon { display: none; }
 .btn--sm { padding: 9px 14px; font-size: 13px; }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--accent), #ff9d4d);
+  background: linear-gradient(135deg, var(--accent-grad-a), var(--accent-grad-b));
   border-color: transparent;
-  color: #1a0d00;
+  color: var(--accent-ink);
   font-weight: 600;
 }
 .btn--primary:hover { box-shadow: 0 12px 28px -12px var(--accent); }
@@ -282,7 +293,7 @@ html[data-theme='light'] .icon-moon { display: none; }
 }
 .hero__title em {
   font-style: normal;
-  background: linear-gradient(120deg, var(--accent), #ffb168);
+  background: linear-gradient(120deg, var(--accent), var(--accent-hi));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

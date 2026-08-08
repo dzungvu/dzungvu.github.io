@@ -41,11 +41,11 @@ h1 {
   font-size: 21pt; margin: 0 0 2px; letter-spacing: .5px;
   color: #111; text-transform: uppercase;
 }
-h1 + p { margin: 0 0 10px; font-size: 11pt; color: #d35400; font-weight: bold; }
+h1 + p { margin: 0 0 10px; font-size: 11pt; color: #0a5fc2; font-weight: bold; }
 h2 {
   font-size: 12pt; margin: 16px 0 7px; padding-bottom: 3px;
-  color: #d35400; text-transform: uppercase; letter-spacing: .6px;
-  border-bottom: 1.4px solid #d35400;
+  color: #0a5fc2; text-transform: uppercase; letter-spacing: .6px;
+  border-bottom: 1.4px solid #0a5fc2;
 }
 h3 { font-size: 10.6pt; margin: 11px 0 1px; color: #111; }
 h3 + p { margin: 0 0 3px; font-size: 9.4pt; color: #666; }

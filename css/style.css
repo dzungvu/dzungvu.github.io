@@ -1863,6 +1863,23 @@ h5,
   margin-bottom: 20px;
 }
 
+.v2-link {
+  color: #ff8b00 !important;
+}
+
+.v2-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 9px;
+  background: #ff8b00;
+  color: #1a0d00;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  vertical-align: middle;
+}
+
 .whatsapp-link {
   position: relative;
 }

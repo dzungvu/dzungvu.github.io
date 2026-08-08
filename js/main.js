@@ -354,6 +354,17 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	// Bound by class, not id: the mobile menu is a clone of this nav, so the
+	// link exists twice and both copies need tracking.
+	document.querySelectorAll(".v2-link").forEach(function (link) {
+		link.addEventListener("click", function () {
+			gtag('event', 'click', {
+				'event_category': 'v2',
+				'event_label': 'click_v2_from_v1'
+			});
+		});
+	});
+
 	document.getElementById("download_cv_file").addEventListener("click", function () {
 		gtag('event', 'download', {
 			'event_category': 'cv',
